@@ -1,0 +1,58 @@
+.instructions-container {
+  margin-top: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.instructions-line {
+  margin: 5px 0;
+}
+
+/* Add responsiveness */
+@media (max-width: 600px) {
+  .recipe-instructions {
+    padding: 10px;
+    width: 90%;
+  }
+
+  .instructions-container {
+    max-height: 200px;
+  }
+
+  .icon-button {
+    padding: 5px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 960px) {
+  .recipe-instructions {
+    padding: 15px;
+    width: 80%;
+  }
+
+  .instructions-container {
+    max-height: 250px;
+  }
+
+  .icon-button {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 961px) {
+  .recipe-instructions {
+    padding: 20px;
+    width: 70%;
+  }
+
+  .instructions-container {
+    max-height: 300px;
+  }
+
+  .icon-button {
+    padding: 15px;
+  }
+}

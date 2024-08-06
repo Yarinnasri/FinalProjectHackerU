@@ -1,0 +1,8 @@
+.light-theme input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #1a0033;
+}
+
+.dark-theme input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%);
+  background-color: #e3f2fd;
+}
