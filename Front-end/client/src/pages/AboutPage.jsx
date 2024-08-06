@@ -6,8 +6,8 @@ import { useTheme } from "../providers/DarkThemeProvider";
 const AboutPage = () => {
   const { isDark } = useTheme();
   const imageSrc = isDark
-    ? "/assets/images/darkImage.png"
-    : "/assets/images/lightImage.png";
+    ? "/assets/images/dark-card-pizza.png"
+    : "/assets/images/light-card-pizza.png";
 
   return (
     <Container>
