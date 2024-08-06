@@ -122,8 +122,8 @@ To run the project:
 I added a few types of users to provide fast access.
 You can create your own users aswell when signing up.
 
-| User Type     | Email                         | Password   |
-| ------------- | ----------------------------- | ---------- |
-| Regular User  | RegularExampleUser@gmail.com  | Abc112233! |
-| Business User | BusinessExampleUser@gmail.com | Abc112233! |
-| Admin User    | AdminExampleUser@gmail.com    | Abc112233! |
+| User Type     | Email              | Password |
+| ------------- | ------------------ | -------- |
+| Regular User  | regular@gmail.com  | Aa1234!  |
+| Business User | business@gmail.com | Aa1234!  |
+| Admin User    | admin@gmail.com    | Aa1234!  |
