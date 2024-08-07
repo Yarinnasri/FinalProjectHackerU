@@ -26,7 +26,6 @@ const CardForm = ({
   title,
 }) => {
   const { isDark } = useTheme();
-  const textColor = isDark ? "#e3f2fd" : "#1a0033";
 
   const formattedData = {
     ...data,
@@ -111,7 +110,7 @@ const CardForm = ({
       />
       <InputComponent
         name="overallTime"
-        label="Overall Time"
+        label="Overall Time (Hours)"
         error={errors.overallTime}
         handleChange={onInputChange}
         data={data}

@@ -115,7 +115,7 @@ To run the project:
 1. `git clone <repository-link>`
 2. `npm i` (install frontend dependencies to client folder,
    install backend dependencies to server folder),
-3. `npm start`
+3. `npm start` (for both client & server)
 
 ## Example Users
 

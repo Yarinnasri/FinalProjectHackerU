@@ -1,22 +1,6 @@
 import Joi from "joi";
 import { func, object } from "prop-types";
 import { useCallback, useMemo, useState } from "react";
-import { storage } from "../../firebase/firebaseStore";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-export async function uploadAudioToFirebase(audio) {
-  const fileName = audio.name;
-
-  const storageRef = ref(storage, fileName);
-  const metadata = { contentType: "audio/mpeg" };
-  try {
-    await uploadBytes(storageRef, audio, metadata);
-    const downloadedURL = await getDownloadURL(storageRef);
-    return downloadedURL;
-  } catch (error) {
-    console.error("Failed to upload file to Firebase:", error);
-    throw new Error("Failed to upload file to Firebase");
-  }
-}
 const useFormsValidate = (initialForm, schema, handleSubmit) => {
   const [formData, setFormData] = useState(initialForm);
   const [formErrors, setFormErrors] = useState({});
@@ -76,24 +60,7 @@ const useFormsValidate = (initialForm, schema, handleSubmit) => {
         }));
         return;
       }
-      const { audio, ...formDataWithoutAudio } = formData;
-      if (audio) {
-        try {
-          const downloadURL = await uploadAudioToFirebase(audio);
-          const formDataWithAudioURL = {
-            ...formDataWithoutAudio,
-            audio: downloadURL,
-          };
-          handleSubmit(formDataWithAudioURL);
-        } catch (error) {
-          setFormErrors((prev) => ({
-            ...prev,
-            audio: "Failed to upload file",
-          }));
-        }
-      } else {
-        handleSubmit(formDataWithoutAudio);
-      }
+      handleSubmit(formData);
     },
     [formData, handleSubmit, validateForm]
   );

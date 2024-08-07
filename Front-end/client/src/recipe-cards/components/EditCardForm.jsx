@@ -102,7 +102,7 @@ const EditCardForm = ({
 
       <InputComponent
         name="overallTime"
-        label="Overall Time"
+        label="Overall Time (Hours)"
         error={errors.overallTime}
         handleChange={onInputChange}
         data={data}

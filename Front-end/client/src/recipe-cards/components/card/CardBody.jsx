@@ -67,7 +67,7 @@ const CardBody = ({ card }) => {
           color={textColor}
           sx={{ fontFamily: "Oswald, sans-serif" }}
         >
-          <strong>Overall Time: </strong>
+          <strong>Overall Time (Hours): </strong>
           {overallTime}
         </Typography>
 
